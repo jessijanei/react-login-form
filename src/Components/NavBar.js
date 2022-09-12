@@ -5,9 +5,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import SearchAlert from './SearchAlert';
+
 
 function NavBar() {
+
+    const handleSearchAlert = () => {
+        alert("Please log in to continue with search.")
+    }
+
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -43,7 +48,7 @@ function NavBar() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success" onclick="SearchAlert()">Search</Button>
+            <Button variant="outline-success" onClick={handleSearchAlert}>Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
